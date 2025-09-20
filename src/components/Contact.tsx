@@ -41,7 +41,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'info@medilifeSciences.com',
+      details: 'info@zyneralifeSciences.com',
       subtitle: 'General Inquiries',
     },
     {

@@ -51,7 +51,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-foreground mb-6">
-            About <span className="text-primary">MediLife Sciences</span>
+            About <span className="text-primary">Zynera Life Sciences</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             For over seven decades, we have been at the forefront of pharmaceutical innovation, 
