@@ -28,23 +28,21 @@ const Navigation = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-background/95 backdrop-blur-md shadow-medical border-b border-border' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/70 backdrop-blur-md shadow-md border-b border-gray-200' : 'bg-transparent'
+        }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2"
+            className="w-32 h-32 flex items-center justify-center"
           >
-            <div className="w-10 h-10 medical-gradient rounded-lg flex items-center justify-center">
-              <Stethoscope className="w-6 h-6 text-white" />
-            </div>
-            <div className="font-display font-bold text-xl text-foreground">
-              MediLife Sciences
-            </div>
+            <img
+              src="/brand.png"
+              alt="Brand Logo"
+              className="w-full h-full object-contain"
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -54,7 +52,7 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 whileHover={{ y: -2 }}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-gray-800 hover:text-blue-600 transition-colors duration-200 font-medium"
                 onClick={(e) => {
                   e.preventDefault();
                   document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
@@ -63,7 +61,7 @@ const Navigation = () => {
                 {item.name}
               </motion.a>
             ))}
-            <Button variant="default" className="medical-gradient text-white hover:shadow-medical">
+            <Button variant="default" className="bg-blue-600 text-white hover:bg-blue-700">
               Get in Touch
             </Button>
           </div>
@@ -85,14 +83,14 @@ const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background border-t border-border"
+            className="lg:hidden bg-white/70 backdrop-blur-md border-t border-gray-200"
           >
             <div className="py-4 space-y-2">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors"
+                  className="block px-4 py-2 text-gray-800 hover:text-blue-600 hover:bg-gray-100 rounded-md transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
                     document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
@@ -103,7 +101,7 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="px-4 pt-2">
-                <Button className="w-full medical-gradient text-white">
+                <Button className="w-full bg-blue-600 text-white hover:bg-blue-700">
                   Get in Touch
                 </Button>
               </div>
@@ -112,6 +110,7 @@ const Navigation = () => {
         )}
       </div>
     </motion.nav>
+
   );
 };
 

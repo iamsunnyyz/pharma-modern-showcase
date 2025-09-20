@@ -55,21 +55,22 @@ const Footer = () => {
               className="mb-6"
             >
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 medical-gradient rounded-lg flex items-center justify-center">
-                  <Stethoscope className="w-7 h-7 text-white" />
-                </div>
-                <div className="font-display font-bold text-2xl">MediLife Sciences</div>
+                <img
+                  src="/brand.png"
+                  alt="Zynera Life Sciences"
+                  className="w-32 h-32 object-contain"
+                />
               </div>
               <p className="text-gray-300 leading-relaxed mb-6">
-                Pioneering healthcare solutions for over 70 years. Committed to improving lives 
+                Pioneering healthcare solutions for over 70 years. Committed to improving lives
                 through innovative medicines and global partnerships.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-primary" />
-                  <span className="text-gray-300">info@medilifeSciences.com</span>
+                  <span className="text-gray-300">info@zyneralifeSciences.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-primary" />
@@ -143,7 +144,7 @@ const Footer = () => {
             className="text-center lg:text-right"
           >
             <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-6 text-gray-300 text-sm">
-              <span>© {currentYear} MediLife Sciences. All rights reserved.</span>
+              <span>© {currentYear} ZyneraLife Sciences. All rights reserved.</span>
               <div className="flex space-x-4">
                 <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                 <span>|</span>
